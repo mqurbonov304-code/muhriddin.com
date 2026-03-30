@@ -65,7 +65,6 @@ text-align:left;
   <div class="nav-left">
     <a onclick="showContent('html')" data-key="nav-html">HTML</a>
     <a onclick="showContent('css')" data-key="nav-css">CSS</a>
-    <a onclick="showContent('js')" data-key="nav-js">JavaScript</a>
     <a onclick="showSettings()" data-key="nav-sett">Sozlamalar</a>
   </div>
 </div>
@@ -75,11 +74,11 @@ text-align:left;
 
 ```
 <h1 data-key="main-title">
-  Til o‘rganish uchun tepadagi HTML CSS JS tillaridan birini tanlang
+  Til o‘rganish uchun tepadagi HTML CSS tillaridan birini tanlang
 </h1>
 
 <h3 data-key="main-sub">
-  Maslahatim: 1-HTML, 2-CSS, 3-JavaScript ketma-ket o‘rganing
+  Maslahatim: 1-HTML, 2-CSS ketma-ket o‘rganing
 </h3>
 ```
 
@@ -110,19 +109,22 @@ const lang={
 uz:{
 "nav-html":"HTML",
 "nav-css":"CSS",
-"nav-js":"JavaScript",
 "nav-sett":"Sozlamalar",
 "s-title":"Sozlamalar",
 "s-lang":"Tilni tanlang",
 
-"main-title":"Til o‘rganish uchun tepadagi HTML CSS JS tillaridan birini tanlang",
-"main-sub":"Maslahatim: 1-HTML, 2-CSS, 3-JavaScript ketma-ket o‘rganing",
+"main-title":"Til o‘rganish uchun tepadagi HTML CSS tillaridan birini tanlang",
+"main-sub":"Maslahatim: 1-HTML, 2-CSS, ketma-ket o‘rganing",
 
 "html":`
 <h2>HTML</h2>
+<h3>HyperTextMarkupLanguage</h3>
 <p>HTML — saytning skeleti.</p>
 <code>&lt;h1&gt;Salom&lt;/h1&gt;</code>
 <p>HTML bilan sayt boshlanadi.</p>
+<p>HTMLda 6ta sarlavha tegi bor h1 dan h6 gacha. ularning eng kattasi h1 bo'lsa eng kichigi h6.</p>
+<p> Matn yozish uchun esa p-paragrif tegi bor u shunaqa yoziladi <code>&lt;p&gt;Bu paragraf&lt;/p&gt;</code>. Uni hohlagancha matn yozish uchun ishlatish mumkin.
+Yana ko'plab teglar mavjud masalan: b-qalin qiladi, i-kursiv ya'ni qiyshaytirib yozadi, shu kabi yana shunga o'xshash teglar ham bor.</p>
 `,
 
 "css":`
@@ -130,47 +132,96 @@ uz:{
 <p>CSS — saytni bezaydi.</p>
 <code>body { background:red; }</code>
 <p>Dizayn CSS bilan.</p>
+<p>CSS bu saytga rang, chiroy, go'zllik beruvchi dasturlash tilidir.
+<p>CSSda stil berishning 3ta turi bor. Ular 1:inline-html kodi ichida stil beriladi. Bu oddiy usuli.
+2:enternal-bu  htmlda head kodidan keyin style kodini ochib shuning ichida yozish degani. Bu siz qulayroq lekin kod juda ko'p bo'lib ketadi.
+Bu esa yaxshiroq usul.</p>
+<p>3: external- bunda htmldan tashqari bo'lakcha fayl ochib stil berish usuli. Bunda htmlga fayl ulanadi link kodi orqali.</p>
+<p>Stillashda enternal va external usullariga selector beriladi bo'lmasa stillash ishlamaydi. Buning ham 3ta turi bor ular oddiy kodning uzini yozish 
+ class orqali berish va id orqali selectorlar berish. Masalan: oddiy usuli - h1 tegida darlavha yozildi keyin unga stil berish uchun h1 { background-color:red;}  bu qizil rangli sarlavha bo'ladi.
+ Endi enternal- bunda html kodiga masalan h1ga class beriladi masalan <h1 class="sarlavha"> deb qo'yildi keyin stillashga utganda  oldiga . qo'yib class nimoni yozadi bunaqa qilib .sarlavha{} shunaqa qilib yozilib ketadi.
+ External esa id orqali bunda ham <h1 id="sarlavha2">  deyiladi keyin esa stillashda nuqta urniga # shuni qo'yadi. Eslab qoling bu faqat 1ta kodga ishlaydi buni bir marta ishlatish mumkin. 
+ Shuning uchun eng yaxshisi class orqali stil berish.</p>
+`,
+},
+
+"ru": {
+"nav-html": "HTML",
+"nav-css": "CSS",
+"nav-sett": "Настройки",
+"s-title": "Настройки",
+"s-lang": "Выберите язык",
+
+"main-title": "Выберите HTML или CSS выше, чтобы начать обучение",
+"main-sub": "Совет: изучайте последовательно: сначала HTML, затем CSS",
+
+"html": `
+<h2>HTML</h2>
+<h3>HyperText Markup Language</h3>
+<p>HTML — это скелет сайта.</p>
+<code>&lt;h1&gt;Привет&lt;/h1&gt;</code>
+<p>С HTML начинается создание любого сайта.</p>
+<p>В HTML есть 6 тегов заголовков: от h1 до h6. Самый большой — h1, самый маленький — h6.</p>
+<p>Для написания текста используется тег параграфа p, он пишется так: <code>&lt;p&gt;Это параграф&lt;/p&gt;</code>. Его можно использовать для любого объема текста.
+Также существует множество других тегов, например: b — делает текст жирным, i — курсивом, и многие другие аналогичные теги.</p>
 `,
 
-"js":`
-<h2>JavaScript</h2>
-<p>JavaScript — saytni jonlantiradi.</p>
-<code>alert("Salom")</code>
-<p>Interaktivlik JS bilan.</p>
+"css": `
+<h2>CSS</h2>
+<p>CSS — украшает сайт.</p>
+<code>body { background: red; }</code>
+<p>Дизайн создается с помощью CSS.</p>
+<p>CSS — это язык стилей, который придает сайту цвет, красоту и эстетичный вид.
+<p>В CSS есть 3 способа задания стилей. 1: inline — стиль пишется прямо внутри HTML-кода. Это самый простой способ.
+2: internal — стили пишутся внутри тега style в секции head документа HTML. Это удобнее, но кода может стать слишком много.
+Это более продвинутый метод.</p>
+<p>3: external — способ создания стилей в отдельном файле вне HTML. Файл подключается к HTML с помощью тега link.</p>
+<p>В методах internal и external используются селекторы, иначе стилизация не сработает. Есть 3 основных вида: выбор самого тега, 
+выбор через class и выбор через id. Например: обычный способ — написали заголовок h1, затем в стилях пишем h1 { background-color: red; } — получится красный заголовок.
+Через class — в HTML тегу h1 даем класс, например &lt;h1 class="sarlavha"&gt;, а в стилях перед именем ставим точку: .sarlavha { }.
+Через id — пишем &lt;h1 id="sarlavha2"&gt;, а в стилях вместо точки используем символ #. Помните, id уникален и должен использоваться один раз для одного элемента. 
+Поэтому лучше всего использовать стилизацию через class.</p>
 `
-},
-
-ru:{
-"nav-html":"HTML",
-"nav-css":"CSS",
-"nav-js":"JavaScript",
-"nav-sett":"Настройки",
-"s-title":"Настройки",
-"s-lang":"Выберите язык",
-
-"main-title":"Выберите HTML CSS JS сверху для обучения",
-"main-sub":"Совет: сначала HTML, потом CSS, потом JS",
-
-"html":"<h2>HTML</h2><p>Структура сайта</p>",
-"css":"<h2>CSS</h2><p>Дизайн сайта</p>",
-"js":"<h2>JavaScript</h2><p>Интерактивность</p>"
-},
-
-en:{
-"nav-html":"HTML",
-"nav-css":"CSS",
-"nav-js":"JavaScript",
-"nav-sett":"Settings",
-"s-title":"Settings",
-"s-lang":"Select language",
-
-"main-title":"Choose HTML CSS JS above to start learning",
-"main-sub":"Advice: Learn HTML → CSS → JS",
-
-"html":"<h2>HTML</h2><p>Website structure</p>",
-"css":"<h2>CSS</h2><p>Website design</p>",
-"js":"<h2>JavaScript</h2><p>Interactivity</p>"
 }
+"en": {
+"nav-html": "HTML",
+"nav-css": "CSS",
+"nav-sett": "Settings",
+"s-title": "Settings",
+"s-lang": "Select Language",
+
+"main-title": "Choose either HTML or CSS above to start learning",
+"main-sub": "Tip: Learn step-by-step: 1st HTML, 2nd CSS",
+
+"html": `
+<h2>HTML</h2>
+<h3>HyperText Markup Language</h3>
+<p>HTML is the skeleton of a website.</p>
+<code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
+<p>Every website starts with HTML.</p>
+<p>HTML has 6 heading tags from h1 to h6. h1 is the largest, while h6 is the smallest.</p>
+<p>The p (paragraph) tag is used for writing text, like this: <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>. It can be used for any length of text.
+There are many other tags as well, such as: b for bold text, i for italics, and other similar tags.</p>
+`,
+
+"css": `
+<h2>CSS</h2>
+<p>CSS styles the website.</p>
+<code>body { background: red; }</code>
+<p>Design is done with CSS.</p>
+<p>CSS is a styling language that gives a website color, beauty, and visual appeal.
+<p>There are 3 ways to apply styles in CSS. 1: inline - styles are applied directly inside the HTML code. This is a simple method.
+2: internal - this involves writing styles inside a style tag within the HTML head section. This is more convenient, but the code can become cluttered.
+This is a better approach.</p>
+<p>3: external - this method involves creating a separate file for styles outside of the HTML. The file is connected to the HTML using the link tag.</p>
+<p>In internal and external methods, selectors are used; otherwise, styling won't work. There are 3 types: using the tag name, 
+using a class, and using an id. For example: basic method - write an h1 tag, then style it as h1 { background-color: red; } to get a red heading.
+Using a class - give the h1 a class, e.g., &lt;h1 class="title"&gt;, and in styles, use a dot before the name: .title { }.
+Using an id - use &lt;h1 id="title2"&gt;, and in styles, use # instead of a dot. Remember, an id is unique and should be used only once per element. 
+Therefore, using classes for styling is the best practice.</p>
+`
+}
+
 };
 
 function setLang(l){
