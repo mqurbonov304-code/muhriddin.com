@@ -243,6 +243,23 @@
             btn.classList.add('active'); tool = btn.id.replace('Btn', '');
         };
     });
+    // 📱 TOUCH SUPPORT (telefon uchun)
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    startDraw(e);
+});
+
+canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    drawing(e);
+});
+
+window.addEventListener('touchend', () => {
+    if (painting) {
+        saveStep();
+        painting = false;
+    }
+});
 </script>
 </body>
 </html>
