@@ -111,6 +111,31 @@ background: var(--primary); color:white; transform: translateY(-10px); box-shado
   <h1 data-key="main-title" class="sarlavha">
     Bu sayt sizga foyda keltirishiga ishonaman
   </h1>
+<header style="background: #007bff; color: white; padding: 40px; border-radius: 15px; text-align: center; font-family: sans-serif;">
+    <div style="display: flex; justify-content: center; gap: 40px; align-items: flex-start;">
+        
+        <!-- Yozish bo'limi -->
+        <div style="max-width: 250px;">
+            <p data-key-text="write-info" style="font-size: 14px; margin-bottom: 15px; min-height: 40px;">
+                Bu bo'limda xuddi Monkeytype kabi tez yozishni mashq qilishingiz mumkin.
+            </p>
+            <a href="yozish-fayli.html" data-key-text="btn-write-label" style="display: block; background: white; color: #007bff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                Yozish
+            </a>
+        </div>
+
+        <!-- O'ynash bo'limi -->
+        <div style="max-width: 250px;">
+            <p data-key-text="play-info" style="font-size: 14px; margin-bottom: 15px; min-height: 40px;">
+                Klaviatura tezligini qiziqarli o'yinlar orqali sinab ko'ring.
+            </p>
+            <a href="oynash-fayli.html" data-key-text="btn-play-label" style="display: block; border: 2px solid white; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                O'ynash
+            </a>
+        </div>
+
+    </div>
+</header>
 
   <div class="cards-container">
    <div class="cards-container">
@@ -231,7 +256,12 @@ const langDict = {
         "weather-btn":"Ob-havoni bilish",
         "m-calendar":"Calendar", 
         "m-sett":"Sozlamalar",
-        "m-language":"Dasturlashni o'rganish"
+        "m-language":"Dasturlashni o'rganish",
+        "write-info": "Yozish tugmasi orqali xuddi Monkeytype saytidagidek matnlarni tez yozishni mashq qilishingiz mumkin.",
+        "play-info": "O'ynash tugmasi orqali turli qiziqarli o'yinlar bilan klaviatura mahoratingizni oshiring.",
+        "btn-write-label": "Yozish",
+        "btn-play-label": "O'ynash",
+  
     },
     ru: { 
         "s-title":"Настройки", 
@@ -272,7 +302,12 @@ const langDict = {
         "weather-btn":"Узнать погоду",
         "m-calendar":"Календарь",
         "m-sett":"Настройки",
-        "m-language":"Научиться программировать"
+        "m-language":"Научиться программировать",
+        "write-info": "С помощью кнопки 'Печатать' вы можете практиковаться в быстром наборе текста, как на сайте Monkeytype.",
+        "play-info": "С помощью кнопки 'Играть' повышайте свои навыки работы с клавиатурой в различных интересных играх.",
+        "btn-write-label": "Печатать",
+        "btn-play-label": "Играть",
+  
     },
     en: { 
         "s-title":"Settings", 
@@ -313,7 +348,12 @@ const langDict = {
         "weather-btn":"Check weather",
         "m-calendar":"Calendar",
         "m-sett":"Settings", 
-        "m-language":"Learn to program"
+        "m-language":"Learn to program",
+        "write-info": "With the 'Type' button, you can practice fast typing just like on the Monkeytype website.",
+        "play-info": "With the 'Play' button, improve your keyboard skills with various fun games.",
+        "btn-write-label": "Type",
+        x1aâd"btn-play-label": "Play",
+  
     }
 };
 
