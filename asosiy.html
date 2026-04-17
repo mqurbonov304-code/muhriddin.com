@@ -60,6 +60,20 @@ button + button { margin-top:5px; }
   text-decoration: none;
   border-radius: 8px;
 }
+  .main-header {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  padding: 30px 40px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.btn-w { background: white; color: #007bff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-right: 10px; }
+.btn-p { border: 2px solid white; color: white; padding: 10px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+.btn-w:hover { opacity: 0.9; }
 .sarlavha{ background: var(--card); padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); box-shadow: 10px 10px 10px rgb(0, 217, 255); }
 .sarlavha:hover{
 background: var(--primary); color:white; transform: translateY(-10px); box-shadow: 10px 10px 10px red;
@@ -111,32 +125,19 @@ background: var(--primary); color:white; transform: translateY(-10px); box-shado
   <h1 data-key="main-title" class="sarlavha">
     Bu sayt sizga foyda keltirishiga ishonaman
   </h1>
-<header style="background: #007bff; color: white; padding: 40px; border-radius: 15px; text-align: center; font-family: sans-serif;">
-    <div style="display: flex; justify-content: center; gap: 40px; align-items: flex-start;">
-        
-        <!-- Yozish bo'limi -->
-        <div style="max-width: 250px;">
-            <p data-key-text="write-info" style="font-size: 14px; margin-bottom: 15px; min-height: 40px;">
-                Bu bo'limda xuddi Monkeytype kabi tez yozishni mashq qilishingiz mumkin.
-            </p>
-            <a href="yozish-fayli.html" data-key-text="btn-write-label" style="display: block; background: white; color: #007bff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                Yozish
-            </a>
-        </div>
+<!-- HTML QISMI -->
+<div class="main-header">
+  <div class="header-info">
+    <p data-key-text="h-desc">Yozish tugmasi xuddi Monkeytype kabi yozish joyiga boradi, O'ynash esa mahorat oshirish uchun.</p>
+  </div>
+  <div class="header-actions">
+    <a href="faylingiz.html" class="btn-w" data-key-text="btn-write">Yozish</a>
+    <a href="faylingiz.html" class="btn-p" data-key-text="btn-play">O'ynash</a>
+  </div>
+</div>
 
-        <!-- O'ynash bo'limi -->
-        <div style="max-width: 250px;">
-            <p data-key-text="play-info" style="font-size: 14px; margin-bottom: 15px; min-height: 40px;">
-                Klaviatura tezligini qiziqarli o'yinlar orqali sinab ko'ring.
-            </p>
-            <a href="oynash-fayli.html" data-key-text="btn-play-label" style="display: block; border: 2px solid white; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                O'ynash
-            </a>
-        </div>
 
-    </div>
-</header>
-
+  
   <div class="cards-container">
    <div class="cards-container">
   <div class="card">
@@ -257,10 +258,10 @@ const langDict = {
         "m-calendar":"Calendar", 
         "m-sett":"Sozlamalar",
         "m-language":"Dasturlashni o'rganish",
-        "write-info": "Yozish tugmasi orqali xuddi Monkeytype saytidagidek matnlarni tez yozishni mashq qilishingiz mumkin.",
-        "play-info": "O'ynash tugmasi orqali turli qiziqarli o'yinlar bilan klaviatura mahoratingizni oshiring.",
-        "btn-write-label": "Yozish",
-        "btn-play-label": "O'ynash",
+        "h-desc": "Yozish tugmasi xuddi Monkeytype sayti kabi yozadigan joyga boradi, O'ynash esa mahorat oshirish uchun.",
+        "btn-write": "Yozish",
+        "btn-play": "O'ynash",
+  
   
     },
     ru: { 
@@ -303,10 +304,10 @@ const langDict = {
         "m-calendar":"Календарь",
         "m-sett":"Настройки",
         "m-language":"Научиться программировать",
-        "write-info": "С помощью кнопки 'Печатать' вы можете практиковаться в быстром наборе текста, как на сайте Monkeytype.",
-        "play-info": "С помощью кнопки 'Играть' повышайте свои навыки работы с клавиатурой в различных интересных играх.",
-        "btn-write-label": "Печатать",
-        "btn-play-label": "Играть",
+        "h-desc": "Кнопка 'Печатать' ведет к тренажеру как на Monkeytype, а 'Играть' — для улучшения навыков.",
+        "btn-write": "Печатать",
+        "btn-play": "Играть",
+  
   
     },
     en: { 
@@ -349,10 +350,10 @@ const langDict = {
         "m-calendar":"Calendar",
         "m-sett":"Settings", 
         "m-language":"Learn to program",
-        "write-info": "With the 'Type' button, you can practice fast typing just like on the Monkeytype website.",
-        "play-info": "With the 'Play' button, improve your keyboard skills with various fun games.",
-        "btn-write-label": "Type",
-        x1aâd"btn-play-label": "Play",
+        "h-desc": "The 'Type' button leads to a Monkeytype-style area, while 'Play' is for skill improvement.",
+        "btn-write": "Type",
+        "btn-play": "Play",
+  
   
     }
 };
