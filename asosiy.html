@@ -71,9 +71,44 @@ button + button { margin-top:5px; }
   font-family: sans-serif;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.btn-w { background: white; color:white; padding: 20px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-right: 10px; }
-.btn-p { border: 2px solid white; color: white; padding: 5px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-.btn-w:hover { opacity: 0.9; }
+  /* Yozish tugmasi - Oq fonda ko'k yozuv */
+.btn-w {
+    background-color: #ffffff;
+    color: #007bff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #ffffff;
+}
+
+/* O'ynash tugmasi - Ko'k hoshiyali va oq yozuv */
+.btn-p {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #ffffff;
+    margin-left: 10px;
+}
+
+/* Hover effektlari */
+.btn-w:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.btn-p:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
 .sarlavha{ background: var(--card); padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); box-shadow: 10px 10px 10px rgb(0, 217, 255); }
 .sarlavha:hover{
 background: var(--primary); color:white; transform: translateY(-10px); box-shadow: 10px 10px 10px red;
